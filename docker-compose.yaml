@@ -1,0 +1,11 @@
+services:
+  wogscore:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: dave20002/wog:latest
+    container_name: wogscore
+    ports:
+      - "8777:5000"
+    volumes:
+      - ./scores.txt:/app/scores.txt

@@ -1,0 +1,6 @@
+*.backup
+test*
+/Part1
+.venv
+.idea
+__pycache__

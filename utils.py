@@ -2,7 +2,7 @@ import os
 from trio import open_file
 #import memory_game
 
-# A string representing a file name. By default “Scores.txt”
+# A string representing a file name. By default “scores.txt”
 SCORES_FILE_NAME = "scores.txt"
 # A number representing a bad return code for a function
 BAD_RETURN_CODE = 22

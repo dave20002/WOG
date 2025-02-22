@@ -1,0 +1,3 @@
+docker login
+docker tag wogscore dave20002/wog:latest
+docker push dave20002/wog:latest

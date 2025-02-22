@@ -1,6 +1,7 @@
 *.backup
 test*
 /Part1
+/DevOpsCourse
 .venv
 .idea
 __pycache__

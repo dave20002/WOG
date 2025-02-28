@@ -15,7 +15,7 @@ There is an automatic test run to check the validity of sore, that has to be in 
 This test is implemented by Jenkins pipeline and test/e2e.py file
 
 For that purposes, Jenkins application running within Docker container on local computer, 
-and running automated tests on local Windows computer within GitBash shell
+and running automated tests on local Windows computer agent within GitBash shell
 
 
 

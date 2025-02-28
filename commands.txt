@@ -1,3 +1,5 @@
-docker login
-docker tag wogscore dave20002/wog:latest
-docker push dave20002/wog:latest
+docker build -t wogscore . #Command to build image
+
+docker login #To login to DockerHub repository
+docker tag wogscore dave20002/wog:latest #Tag image
+docker push dave20002/wog:latest #To push image to Docker Hub

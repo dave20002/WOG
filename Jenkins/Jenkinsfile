@@ -1,0 +1,51 @@
+pipeline {
+    agent {
+        label 'mypc'
+    }
+    stages {
+        stage('Checkout Repository') {
+            steps {
+                script {
+                    dir('c:\\Projects\\DevOps\\WOG') {
+                        // Run the hostname command using Git Bash
+                        bat '"C:\\Program Files\\Git\\bin\\bash.exe" -c "git checkout main"'
+                    }
+                }
+            }
+        }
+        stage('Build Docker image') {
+            steps {
+                script {
+                    dir('c:\\Projects\\DevOps\\WOG') {
+                        // Build and run docker container
+                        bat '"C:\\Program Files\\Git\\bin\\bash.exe" -c "docker compose build"'
+                        bat '"C:\\Program Files\\Git\\bin\\bash.exe" -c "docker compose up -d"'
+                    }
+                }
+            }
+        }
+
+        stage('Run test') {
+            steps {
+                script {
+                    dir('c:\\Projects\\DevOps\\WOG\\tests') {
+                        // Run test
+                        bat '"C:\\Program Files\\Git\\bin\\bash.exe" -c "python e2e.py"'
+                    }
+                }
+            }
+        }
+        stage('Terminate Docker container and push to DockerHub registry') {
+            steps {
+                script {
+                    dir('c:\\Projects\\DevOps\\WOG') {
+                        // Stop docker container
+                        bat '"C:\\Program Files\\Git\\bin\\bash.exe" -c "docker compose down"'
+                        // Push docker image to DockerHu
+                        bat '"C:\\Program Files\\Git\\bin\\bash.exe" -c "docker push dave20002/wog:latest"'
+                    }
+                }
+            }
+        }
+    }
+}

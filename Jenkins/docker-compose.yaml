@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+  jenkins:
+    image: jenkins/jenkins:lts
+    container_name: node1
+    ports:
+      - "8080:8080"  # Jenkins web interface
+      - "50000:50000"  # JNLP port for agents
+    volumes:
+      - jenkins_home:/var/jenkins_home
+    environment:
+      - JAVA_OPTS=-Djenkins.install.runSetupWizard=false
+    restart: unless-stopped
+
+volumes:
+  jenkins_home:
+    driver: local

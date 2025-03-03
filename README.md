@@ -39,8 +39,8 @@ and running automated tests on local Windows computer agent within GitBash shell
 ### Running Locally
 
 1. Clone the repository:
-    git clone https://github.com/dave20002/WOG.git
-    cd /WOG
+    - git clone https://github.com/dave20002/WOG.git
+    - cd /WOG
 
 2. Install the required dependencies:
     pip install -r requirements.txt

@@ -43,22 +43,22 @@ and running automated tests on local Windows computer agent within GitBash shell
     - cd /WOG
 
 2. Install the required dependencies:
-    pip install -r requirements.txt
+    - pip install -r requirements.txt
     
 3. Run the main application:
-    python main.py
+    - python main.py
 
 4. To run the score server:
-    python main_score.py
+    - python main_score.py
     
 
 ### Score app running and testing with Docker (automation)
 
 1. Build the Docker image:
-    docker-compose build
+    - docker-compose build
     
 2. Run the Docker container:
-    docker-compose up
+    - docker-compose up
     
 The score server will be available at `http://localhost:8777`.
 

@@ -52,15 +52,18 @@ and running automated tests on local Windows computer agent within GitBash shell
     - python main_score.py
     
 
-### Score app running and testing with Docker (automation)
+### Score app running and testing with Docker (automation by Jenkins)
 
 1. Build the Docker image:
     - docker-compose build
     
 2. Run the Docker container:
     - docker-compose up
+
+3. The test e2e.py is running by Jenkins agent on local windows computer
     
-The score server will be available at `http://localhost:8777`.
+The score server will be available at `http://localhost:8777`. 
+Note: the container is terminated at the end of the test.
 
 ## Project Files
 
